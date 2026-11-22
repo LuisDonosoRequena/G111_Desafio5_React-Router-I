@@ -1,0 +1,5 @@
+.hero {
+  height: 100vh;
+  background: url("/pizzas.jpg") center/cover no-repeat;
+  text-align: center;
+}

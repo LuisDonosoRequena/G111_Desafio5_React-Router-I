@@ -1,0 +1,43 @@
+:root { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: #212529; background: #f8f9fa; }
+body { margin: 0; min-width: 320px; background: #f8f9fa; }
+#root, .app-shell { min-height: 100vh; }
+.app-shell { display: flex; flex-direction: column; }
+.app-shell > main { flex: 1; }
+.navbar { min-height: 64px; }
+.pizza-card { width: 18rem; overflow: hidden; border: 1px solid #e5e5e5; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+.pizza-card-image { height: 190px; object-fit: cover; }
+.pizza-ingredients { padding-left: 0; list-style: none; margin-bottom: 0; }
+.pizza-ingredients li { padding: 2px 0; text-transform: capitalize; }
+.cart-container { max-width: 900px; }
+.cart-panel { background: #fff; border-radius: 14px; padding: 24px; box-shadow: 0 5px 22px rgba(0,0,0,.08); }
+.cart-item { display: flex; align-items: center; gap: 20px; padding: 18px 0; border-bottom: 1px solid #e9ecef; }
+.cart-item-image { width: 112px; height: 90px; object-fit: cover; border-radius: 9px; }
+.cart-item-info { flex: 1; }
+.cart-item-info h2 { font-size: 1.2rem; margin-bottom: 8px; }
+.quantity-controls { display: flex; align-items: center; gap: 12px; }
+.quantity-controls span { min-width: 20px; text-align: center; font-weight: 700; }
+.cart-total { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 24px; }
+.cart-total h2 { font-size: 1.5rem; margin: 0; }
+footer { margin-top: auto; }
+@media (max-width: 575px) {
+  .cart-panel { padding: 14px; }
+  .cart-item { gap: 10px; flex-wrap: wrap; }
+  .cart-item-image { width: 84px; height: 72px; }
+  .cart-item-info { min-width: calc(100% - 110px); }
+  .quantity-controls { margin-left: auto; }
+  .cart-total { align-items: flex-start; flex-direction: column; }
+}
+.pizza-detail-image { min-height: 320px; object-fit: cover; }
+@media (max-width: 767px) { .pizza-detail-image { min-height: 230px; max-height: 300px; } }
+/* Hito 5: React Router navigation and utility pages */
+.navbar-links .nav-link { color: rgba(255,255,255,.8); text-decoration: none; padding: .35rem .5rem; }
+.navbar-links .nav-link:hover, .navbar-links .nav-link.active { color: #fff; }
+.auth-card { width: min(100% - 2rem, 430px); margin: 3rem auto; padding: 2rem; background: #fff; border-radius: 14px; box-shadow: 0 5px 22px rgba(0,0,0,.08); }
+.auth-card h1 { text-align: center; font-size: 1.8rem; margin-bottom: .5rem; }
+.auth-subtitle { text-align: center; color: #6c757d; margin-bottom: 1.5rem; }
+.auth-switch { text-align: center; margin: 1rem 0 0; }
+.link-button { border: 0; background: none; color: #dc3545; padding: 0; text-decoration: underline; }
+.profile-card p:not(.auth-subtitle) { margin: 1.5rem 0; }
+.not-found { min-height: 55vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.not-found-emoji { font-size: 5rem; }
+@media (max-width: 767px) { .navbar-links { justify-content: center; width: 100%; padding: .5rem 0; } }
